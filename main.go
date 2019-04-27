@@ -29,7 +29,7 @@ func main() {
 	// Http server
 	go func(c *echo.Echo) {
 		// https redirection
-		e.Use(middleware.HTTPSRedirect())
+		e.Pre(middleware.HTTPSRedirect())
 		e.Logger.Fatal(e.Start(":80"))
 	}(e)
 
