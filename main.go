@@ -16,7 +16,7 @@ func main() {
 	e.Use(middleware.Secure())
 	e.Use(middleware.Gzip())
 
-	url1, err := url.Parse("http://127.0.0.1:1337/")
+	url1, err := url.Parse("http://127.0.0.1:8080/")
 	if err != nil {
 		e.Logger.Fatal(err)
 	}
