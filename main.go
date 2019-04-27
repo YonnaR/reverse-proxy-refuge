@@ -10,6 +10,12 @@ import (
 
 func main() {
 	e := echo.New()
+
+	e.Use(middleware.LoggerWithConfig(middleware.DefaultLoggerConfig))
+	e.Use(middleware.Recover())
+	e.Use(middleware.Secure())
+	e.Use(middleware.Gzip())
+
 	url1, err := url.Parse("http://127.0.0.1:1337/")
 	if err != nil {
 		e.Logger.Fatal(err)
