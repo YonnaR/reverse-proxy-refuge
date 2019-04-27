@@ -10,7 +10,7 @@ import (
 
 func main() {
 	e := echo.New()
-	url1, err := url.Parse("http://127.0.0.1:8080/")
+	url1, err := url.Parse("http://127.0.0.1:1337/")
 	if err != nil {
 		e.Logger.Fatal(err)
 	}
